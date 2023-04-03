@@ -12,6 +12,7 @@ const TableUserPaginate=(props)=>{
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
+        props.fetchListUsersWithPaginate(+event.selected + 1);    
         console.log(`User requested page number ${event.selected}`);
     };
 
