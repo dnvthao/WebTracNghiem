@@ -30,7 +30,9 @@ const DeleteUser =(userId)=>{
 }
 
 const getUserWithPaginate =(page, limit)=>{
-    return axios.delete(`api/v1/participant?page=1&limit=5`);
+    return axios.delete(`api/v1/participant?page=${page}&limit=${limit}`);
 }
 
-export {postCreateNewUser, getAllUsers,putUpdateNewUser,DeleteUser}
+export {
+    postCreateNewUser, getAllUsers,putUpdateNewUser,
+    DeleteUser, getUserWithPaginate}
